@@ -55,7 +55,7 @@ int main()
         cout<<"2 - REPORTE A"<<endl;
         cout<<"3 - REPORTE B"<<endl;
         cout<<"4 - REPORTE C"<<endl;
-        cout<<"5 - CRÉDITOS"<<endl;
+        cout<<"5 - CREDITOS"<<endl;
         cout<<"--------------------------------"<<endl;
         cout<<"0 - SALIR"<<endl;
         cout<<endl;
