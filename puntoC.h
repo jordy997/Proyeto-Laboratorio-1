@@ -33,9 +33,10 @@ void puntoC(int vecHorario[18])
             if(vecHorario[i] != 0)
             {
                 porcentaje=(vecHorario[i]*100)/contador_horario;
-                cout<<"EL PORCENTAJE DE CAPTURAS A LAS "<<i<<"HS ES: "<<porcentaje;
                 cout<<endl;
-                cout<<"LA CANTIDAD DE CAPTURAS EN ESE HORARIO FUERON: "<<vecHorario[i];
+                cout<<"EL PORCENTAJE DE CAPTURAS A LAS "<<i<<"HS ES: "<<porcentaje<<endl;
+                cout<<endl;
+                cout<<"LA CANTIDAD DE CAPTURAS EN ESE HORARIO FUERON: "<<vecHorario[i]<<endl;
                 cout<<endl;
             }
         }
