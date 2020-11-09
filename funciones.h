@@ -32,7 +32,7 @@ void menuPrincipal()
     locate(6,12);
     cout<<"4 - REPORTE C"<<endl;
     locate(6,14);
-    cout<<"5 - CRÉDITOS"<<endl;
+    cout<<"5 - CREDITOS"<<endl;
     locate(6,16);
     cout<<"--------------------------------"<<endl;
     locate(6,18);
@@ -45,31 +45,31 @@ void asignar_especie(int nro, char nombre[])
     switch(nro)
     {
     case 1:
-        strcpy(nombre,"Anchoa");
+        strcpy(nombre,"ANCHOA");
         break;
     case 2:
-        strcpy(nombre,"Pejerrey");
+        strcpy(nombre,"PEJERREY");
         break;
     case 3:
-        strcpy(nombre,"Bagre");
+        strcpy(nombre,"BAGRE");
         break;
     case 4:
-        strcpy(nombre,"Boga");
+        strcpy(nombre,"BOGA");
         break;
     case 5:
-        strcpy(nombre,"Caballa");
+        strcpy(nombre,"CABALLA");
         break;
     case 6:
-        strcpy(nombre,"Carpa");
+        strcpy(nombre,"CARPA");
         break;
     case 7:
-        strcpy(nombre,"Trucha Patagonica");
+        strcpy(nombre,"TRUCHA PATAGONICA");
         break;
     case 8:
-        strcpy(nombre,"Dorado");
+        strcpy(nombre,"DORADO");
         break;
     case 9:
-        strcpy(nombre,"Lisa");
+        strcpy(nombre,"LISA");
         break;
     }
 }
