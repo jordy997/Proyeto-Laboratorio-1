@@ -32,7 +32,7 @@ void menuPrincipal()
     locate(6,12);
     cout<<"4 - REPORTE C"<<endl;
     locate(6,14);
-    cout<<"5 - CRÉDITOS"<<endl;
+    cout<<"5 - CRÃ‰DITOS"<<endl;
     locate(6,16);
     cout<<"--------------------------------"<<endl;
     locate(6,18);
@@ -80,8 +80,8 @@ void mostrar_grupo()
     setColor(BLUE);
     locate(40, 2);
     cout<<"***********************"<<endl;
-    locate(40, 4);
-    cout<<"           TEAM        "<<endl;
+    locate(50, 4);
+    cout<<"TEAM"<<endl;
     locate(40, 6);
     cout<<"****** SHARK BOY ******"<<endl;
     locate(40, 8);
