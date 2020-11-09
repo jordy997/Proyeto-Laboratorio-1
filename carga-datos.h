@@ -47,7 +47,7 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], int vecHorario[18])
         cout<<endl;
         cout<<"INGRESE LOS KILOGRAMOS: ";
         cin>>KGpescado;
-        while(codEspecies==10 && KGpescado<500 || codEspecies==20 && KGpescado<2 ||
+        while(codEspecies==10 && KGpescado<0.5 || codEspecies==20 && KGpescado<2 ||
                 codEspecies==30 && KGpescado<4 || codEspecies==40 && KGpescado<5 ||
                 codEspecies==50 && KGpescado<1 || codEspecies==60 && KGpescado<5 ||
                 codEspecies==70 && KGpescado<1.5 || codEspecies==80 && KGpescado<3 || codEspecies==90 && KGpescado<2.5
