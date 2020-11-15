@@ -8,9 +8,9 @@
 using namespace std;
 using namespace rlutil;
 
-void cargaDatos(float vecPescador[15], int vecEspecies[9], int vecHorario[18])
+void cargaDatos(float vecPescador[15], int vecEspecies[9], float vecHorario[18], float vecKGpescado[15])
 {
-    int codPescador, codEspecies, horas;
+    int codPescador, codEspecies, horas, ant;
     float KGpescado, pPeso=0;
 
     cout<<endl;
@@ -31,6 +31,7 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], int vecHorario[18])
     cout<<endl;
     while(codPescador !=0 )
     {
+        ant=codPescador;
         cout<<"INGRESE EL CODIGO DE ESPECIE: ";
         cin>>codEspecies;
         while(codEspecies!=10 && codEspecies!= 20 && codEspecies!= 30 &&
@@ -44,6 +45,20 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], int vecHorario[18])
             cout<<"INGRESE EL CODIGO DE ESPECIE: ";
             cin>>codEspecies;
         }
+
+        cout<<endl;
+        cout<<"INGRESE EL HORARIO: ";
+        cin>>horas;
+        while(horas<6 || horas>24 )
+        {
+            cout<<endl;
+            cout<<"INGRESE UN HORARIO ENTRE LAS 6AM Y 23PM."<<endl;
+            cout<<endl;
+            cout<<"INGRESE EL HORARIO: ";
+            cin>>horas;
+        }
+        vecHorario[horas-5] ++;
+
         cout<<endl;
         cout<<"INGRESE LOS KILOGRAMOS: ";
         cin>>KGpescado;
@@ -59,22 +74,20 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], int vecHorario[18])
             cout<<"INGRESE LOS KILOGRAMOS: ";
             cin>>KGpescado;
         }
-        cout<<endl;
-        cout<<"INGRESE EL HORARIO: ";
-        cin>>horas;
-        while(horas<6 || horas>24 )
+
+        if(ant==codPescador)
         {
-            cout<<endl;
-            cout<<"INGRESE UN HORARIO ENTRE LAS 6AM Y 23PM."<<endl;
-            cout<<endl;
-            cout<<"INGRESE EL HORARIO: ";
-            cin>>horas;
+            if( vecKGpescado[codPescador-99] < KGpescado)
+            {
+                vecKGpescado[codPescador-99] = KGpescado;
+            }
         }
         cout<<endl;
         vecPescador[codPescador-99] += KGpescado;
-        vecEspecies[codEspecies/10] ++;
-        vecHorario[horas] ++;
 
+        vecEspecies[codEspecies/10] ++;
+
+        cls();
         cout<<"--------------------------------"<<endl;
         cout<<"INGRESE EL CODIGO DE PESCADOR: ";
         cin>>codPescador;
@@ -85,13 +98,9 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], int vecHorario[18])
             cout<<endl;
             cout<<"INGRESE EL CODIGO DE PESCADOR: ";
             cin>>codPescador;
-
         }
         cout<<endl;
     }
-
-    //PONER CLS EN DONDE HAY MENSAJES DE ERROR!!
-
     cout<<endl;
     system("pause");
     cls();
