@@ -77,7 +77,7 @@ void asignar_especie(int nro, char nombre[])
 void mostrar_grupo()
 {
     cls();
-    setColor(BLUE);
+    setColor(GREEN);
     locate(40, 2);
     cout<<"***********************"<<endl;
     locate(50, 4);
