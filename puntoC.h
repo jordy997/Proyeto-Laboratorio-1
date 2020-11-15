@@ -9,12 +9,12 @@
 using namespace std;
 using namespace rlutil;
 
-void puntoC(int vecHorario[18])
+void puntoC(float vecHorario[18])
 {
 
     float porcentaje;
-    int contador_horario = 0;
-    int contadorHorario = 0;
+    float contador_horario = 0;
+    float contadorHorario = 0;
 
     for(int x=0; x<18; x++)
     {
@@ -32,11 +32,12 @@ void puntoC(int vecHorario[18])
         {
             if(vecHorario[i] != 0)
             {
-                porcentaje=(vecHorario[i]*100)/contador_horario;
-                cout<<endl;
-                cout<<"EL PORCENTAJE DE CAPTURAS A LAS "<<i<<"HS ES: "<<porcentaje<<endl;
+                porcentaje=vecHorario[i]*100/contador_horario;
+
+                cout<<"EL PORCENTAJE DE CAPTURAS A LAS "<<i+5<<"HS ES: "<<porcentaje<<"%"<<endl;
                 cout<<endl;
                 cout<<"LA CANTIDAD DE CAPTURAS EN ESE HORARIO FUERON: "<<vecHorario[i]<<endl;
+                cout<<"-----------------------------------------------------"<<endl;
                 cout<<endl;
             }
         }
