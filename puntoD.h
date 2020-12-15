@@ -22,11 +22,11 @@ void puntoD(float vecKGpescado[15])
     }
     if(contadorKG != 0)
     {
-        for(int c=1; c<=15; c++)
+        for(int c=0; c<9; c++)
         {
             if(vecKGpescado[c] != 0){
                 cout<<endl;
-                cout<<"CODIGO DE PESCADOR: "<<c+99<<endl;
+                cout<<"CODIGO DE ESPECIE: "<<c*10<<endl;
                 cout<<"EL MAYOR PESO REGISTRADO ES: "<<vecKGpescado[c]<<endl;
             }
         }
