@@ -8,9 +8,9 @@
 using namespace std;
 using namespace rlutil;
 
-void cargaDatos(float vecPescador[15], int vecEspecies[9], float vecHorario[18], float vecKGpescado[15])
+void cargaDatos(float vecPescador[15], int vecEspecies[9], float vecHorario[18], float vecKGpescado[15], int vecCEspecies[15])
 {
-    int codPescador, codEspecies, horas, ant;
+    int codPescador, codEspecies, horas, ant, contEspecies=0;
     float KGpescado, pPeso=0;
 
     cout<<endl;
@@ -39,12 +39,16 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], float vecHorario[18],
                 codEspecies!= 70 && codEspecies!= 80 && codEspecies!= 90
              )
         {
+            if(codEspecies == 20){
+                vecCEspecies[codPescador-100] ++;
+              }
             cout<<endl;
             cout<<"INGRESE EL CODIGO DE ESPECIE QUE SEAN: 10, 20, 30, 40, 50, 60, 70, 80 o 90."<<endl;
             cout<<endl;
             cout<<"INGRESE EL CODIGO DE ESPECIE: ";
             cin>>codEspecies;
         }
+
 
         cout<<endl;
         cout<<"INGRESE EL HORARIO: ";
@@ -77,13 +81,13 @@ void cargaDatos(float vecPescador[15], int vecEspecies[9], float vecHorario[18],
 
         if(ant==codPescador)
         {
-            if( vecKGpescado[codPescador-99] < KGpescado)
+            if( vecKGpescado[codEspecies/10] < KGpescado)
             {
-                vecKGpescado[codPescador-99] = KGpescado;
+                vecKGpescado[codEspecies/10] = KGpescado;
             }
         }
         cout<<endl;
-        vecPescador[codPescador-99] += KGpescado;
+        vecPescador[codPescador-100] += KGpescado;
 
         vecEspecies[codEspecies/10] ++;
 
